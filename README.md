@@ -1,13 +1,9 @@
 # 🛡️ RiskOS LLM Guard
 
-> RAG-augmented LLM output guardrail system. Blocks ~94% of unsafe
-> generations with <1500ms latency. Built on LangChain + Opik.
-
-![HF Space](https://img.shields.io/badge/🤗%20HuggingFace-Live%20Demo-yellow?style=flat-square)
-![LangChain](https://img.shields.io/badge/LangChain-Enabled-purple?style=flat-square)
-![Opik](https://img.shields.io/badge/Opik-Logging-orange?style=flat-square)
-![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
+> 🛡️ RAG-augmented LLM output guardrail system. Blocks ~94% of unsafe
+> generations (jailbreaks, PII, harmful content) with <1500ms latency.
+> Integrates LangChain for policy evaluation and Opik for privacy-safe audit
+> logging. Ensuring financial-grade safety and compliance.
 
 **Live Demo:** https://huggingface.co/spaces/soupstick/opik_guard_v1
 **API Docs:** https://soupstick-opik-guard-v1.hf.space/docs
