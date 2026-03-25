@@ -24,9 +24,9 @@ Unsafe LLM outputs in a financial or risk context can lead to data leaks, regula
 
 ```mermaid
 graph TD
-    A[LLM Output / User Input] --> B[Policy Lookup (RAG)]
-    B --> B1[Retrieve relevant policies based on semantic similarity]
-    B1 --> C[Guard Evaluation (LangChain)]
+    A["LLM Output / User Input"] --> B["Policy Lookup (RAG)"]
+    B --> B1["Retrieve relevant policies based on semantic similarity"]
+    B1 --> C["Guard Evaluation (LangChain)"]
     C --> C1[Policy check]
     C --> C2[Jailbreak detection]
     C --> C3[PII detection]
@@ -34,9 +34,9 @@ graph TD
     C1 & C2 & C3 & C4 --> D{Verdict}
     D -->|SAFE| E[Pass through]
     D -->|FLAGGED| F[Pass with warning logged to Opik]
-    D -->|BLOCKED| G[Reject + reason + policy cited]
+    D -->|BLOCKED| G["Reject + reason + policy cited"]
     E & F & G --> H[Opik Logging]
-    H --> H1[Log: hash, verdict, policy, latency]
+    H --> H1["Log: hash, verdict, policy, latency"]
 ```
 
 ---
