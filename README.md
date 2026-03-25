@@ -22,28 +22,22 @@ Unsafe LLM outputs in a financial or risk context can lead to data leaks, regula
 
 ### How It Works
 
-LLM Output / User Input
-│
-▼
-**Policy Lookup (RAG)**
-Retrieve relevant policy docs based on semantic similarity to input
-│
-▼
-**Guard Evaluation (LangChain)**
-├── Policy check
-├── Jailbreak detection
-├── PII detection
-└── Harmful content classification
-│
-▼
-**Verdict**
-├── `SAFE`    → Pass through
-├── `FLAGGED` → Pass with warning logged to Opik
-└── `BLOCKED` → Reject + reason + policy cited
-│
-▼
-**Opik Logging**
-Every call logged: input hash, verdict, policy triggered, latency, confidence
+```mermaid
+graph TD
+    A[LLM Output / User Input] --> B[Policy Lookup (RAG)]
+    B --> B1[Retrieve relevant policies based on semantic similarity]
+    B1 --> C[Guard Evaluation (LangChain)]
+    C --> C1[Policy check]
+    C --> C2[Jailbreak detection]
+    C --> C3[PII detection]
+    C --> C4[Harmful content classification]
+    C1 & C2 & C3 & C4 --> D{Verdict}
+    D -->|SAFE| E[Pass through]
+    D -->|FLAGGED| F[Pass with warning logged to Opik]
+    D -->|BLOCKED| G[Reject + reason + policy cited]
+    E & F & G --> H[Opik Logging]
+    H --> H1[Log: hash, verdict, policy, latency]
+```
 
 ---
 
