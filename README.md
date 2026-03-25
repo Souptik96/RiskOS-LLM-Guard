@@ -108,4 +108,4 @@ docker run -p 7860:7860 riskos-llm-guard
 | **RiskOS** | Core Orchestrator & Multi-Agent Switchboard | [Link](https://github.com/Souptik96/RiskOS) |
 | **Risk-Pipeline** | ML Triage & Rule Engine | [Link](https://github.com/Souptik96/RiskOS-Risk-Pipeline) |
 | **LLM-Guard** | RAG-Augmented Guardrails (this repo) | [Link](https://github.com/Souptik96/RiskOS-LLM-Guard) |
-| **Fraud-Intelligence** | Graph-based Identity & Entity Linkage | [Link](https://github.com/Souptik96/RiskOS-Fraud-Intelligence) |
+| **Marketplace-Intelligence** | NL→SQL Analytics Layer | [Link](https://github.com/Souptik96/RiskOS-Marketplace-Intelligence) |
