@@ -1,0 +1,10 @@
+# Opik Logging Configuration
+project_name: "riskos-llm-guard"
+logging:
+  enable: true
+  privacy_mode: true  # Logs hash instead of raw text
+  flush_interval_seconds: 5
+  
+api:
+  base_url: "https://api.comet.com/opik"
+  timeout_seconds: 10
